@@ -22,6 +22,17 @@
 # Created the project named by rest_api
 14. django-admin startapp rest_api
 
-# Push to GitHab
+# Push to GitHab 
+# https://www.django-rest-framework.org/
+# Add 'rest_framework' to your INSTALLED_APPS setting.
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+]
+# If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to your root urls.py file.
+urlpatterns = [
+    ...
+    path('api-auth/', include('rest_framework.urls'))
+]
 
 
