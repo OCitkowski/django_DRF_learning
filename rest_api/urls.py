@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import TestView
-from rest_api.views import TestApiView, CommentApiView
+from rest_api.views import TestApiView, CommentApiView, TestApiViewOnlyRequest
 
 app_name = 'blog_urls'
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path('', TestView.as_view(), name='home'),
     path('api/v1/test_list', TestApiView.as_view()),
     path('api/v1/comment_list', CommentApiView.as_view()),
+    path('api/v1/hi', TestApiViewOnlyRequest.as_view()),
 ]
