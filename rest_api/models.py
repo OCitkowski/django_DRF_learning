@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 
 class Test(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -15,10 +14,8 @@ class Test(models.Model):
         verbose_name_plural = 'Tests'
 
     def __str__(self):
-        if len(self.text) >= 50:
-            return f"{self.text[:150]}..."
-        else:
-            return f"{self.text[:150]}"
+        return f"{self.title} - {self.date_update}..."
+
 
 
 class CommentTest(models.Model):
@@ -30,7 +27,4 @@ class CommentTest(models.Model):
         verbose_name_plural = 'comments'
 
     def __str__(self):
-        if len(self.text) >= 50:
-            return f"{self.text[:50]}..."
-        else:
-            return f"{self.text[:50]}"
+        return f"{self.title} ..."

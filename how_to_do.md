@@ -35,4 +35,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls'))
 ]
 
+# kill port
+sudo lsof -t -i tcp:8000 | xargs kill -9
+
 
