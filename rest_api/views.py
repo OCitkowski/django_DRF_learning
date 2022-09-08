@@ -28,6 +28,10 @@ class CommentApiView(generics.ListAPIView):
 
 class TestApiViewOnlyRequest(APIView):
     def get(self, request):
-        return Response({'hi': 'men'})
+        lst = Test.objects.all().values()
+        return Response({'list': list(lst)})
+
+    def post(self, request):
+        return Response({'hi post': 'men post'})
 
 
