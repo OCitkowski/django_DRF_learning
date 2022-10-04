@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Test(models.Model):
     title = models.CharField(max_length=200, unique=True)
     text = models.TextField()
@@ -15,7 +14,6 @@ class Test(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.date_update}..."
-
 
 
 class CommentTest(models.Model):

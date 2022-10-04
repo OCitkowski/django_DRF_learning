@@ -7,7 +7,8 @@ class TestSerializer(serializers.ModelSerializer):
         model = Test
         fields = ('title', 'text', 'quality', 'date_update')
 
+
 class CommentTestSerializer(serializers.ModelSerializer):
     class Meta:
         model = CommentTest
-        fields = ('title', 'test')
+        fields = ('__all__')
