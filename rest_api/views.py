@@ -4,8 +4,7 @@ from .serializers import TestSerializer, CommentTestSerializer
 from .utils import MixinView
 from rest_framework import generics
 from .models import Test, CommentTest
-from rest_framework.views import APIView
-from rest_framework.response import Response
+
 
 
 class TestView(MixinView, TemplateView):
