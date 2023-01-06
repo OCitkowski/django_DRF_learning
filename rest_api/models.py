@@ -12,6 +12,7 @@ class Test(models.Model):
         verbose_name = 'Test'
         verbose_name_plural = 'Tests'
 
+
     def __str__(self):
         return f"{self.title} - {self.date_update}..."
 
