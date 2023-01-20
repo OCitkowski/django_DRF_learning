@@ -38,4 +38,8 @@ urlpatterns = [
 # kill port
 sudo lsof -t -i tcp:8000 | xargs kill -9
 
+requirements
 
+    pip freeze > requirements.txt 
+    pip install -r requirements.txt
+    pip uninstall requirements.tx
